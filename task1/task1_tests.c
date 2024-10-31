@@ -1,6 +1,7 @@
 #include "checkit.h"
 #include "task1.h"
 
+
 void test1() {
    char input[] = "Hello THERE";
    char result[15];
@@ -11,7 +12,17 @@ void test1() {
    checkit_string(result, expected);
 }
 
+void test2(){
+	char input[] = "Boo HAPPY haLLOWEEn";
+	char *expected = "boo happy halloween";
+	
+	str_lower_mutate(input);
+	
+	checkit_string(input, expected);
+}
+
 int main(void) {
    test1();
+   test2();
    return 0;
 }
